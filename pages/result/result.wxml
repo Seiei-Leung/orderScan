@@ -1,0 +1,43 @@
+<view>
+  <view style='display: flex;justify-content:space-around;'>
+    <view>
+      <image src="{{resultList[0] != null ? resultList[0].picurl : ''}}" style="margin: 10px 0 0 10px;width: 100px;height: 100px"></image>
+    </view>
+    <view class="resultItem" style='padding: 0;padding-left: 30px;border: none;'>
+      <view>
+        <view class="title">制单号：</view>
+        <view class="txt">{{resultList[0] != null ? resultList[0].orderno : ''}}</view>
+      </view>
+      <view>
+        <view class="title">客户：</view>
+        <view class="txt">{{resultList[0] != null ? resultList[0].custname : ''}}</view>
+      </view>
+      <view>
+        <view class="title">款号</view>
+        <view class="txt">{{resultList[0] != null ? resultList[0].styleno : ''}}</view>
+      </view>
+      <view>
+        <view class="title">季节：</view>
+        <view class="txt">{{resultList[0] != null ? resultList[0].season : ''}}</view>
+      </view>
+      <view>
+        <view class="title">颜色：</view>
+        <view class="txt">{{resultList[0] != null ? resultList[0].color : ''}}</view>
+      </view>
+      <view>
+        <view class="title">样板类型：</view>
+        <view class="txt">{{resultList[0] != null ? resultList[0].sampletype : ''}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:for="{{resultList}}" wx:for-item="item" class="resultItem">
+    <view style="color: red;">
+      <view class="title">接收人：</view>
+      <view class="txt">{{item.receivermen}}</view>
+    </view>
+    <view>
+      <view class="title">接收时间：</view>
+      <view class="txt">{{item.receivetime}}</view>
+    </view>
+  </view>
+</view>

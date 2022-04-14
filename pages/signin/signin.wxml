@@ -1,0 +1,18 @@
+<!--pages/signin/signin.wxml-->
+<view>
+  <view class="inputWrapper" style='margin-top: 30px;border-top: 1px solid #ddd;'>
+    <view class='title'>
+      <sicon style="line-height:50px;text-align:center;" name="icon-user"></sicon>
+    </view>
+    <input class="input" bindinput="bindUserName" placeholder="请输入用户名"></input>
+  </view>
+  <view class="inputWrapper" style='border-bottom: 1px solid #ddd;'>
+    <view class='title'>
+      <sicon style="line-height:50px;text-align:center;" name="icon-lock"></sicon>
+    </view>
+    <input class="input" bindinput="bindPW" password="true" placeholder="请输入密码" style='border-top: 1px solid #ddd;'></input>
+  </view>
+  <view class="submitContainer">
+    <button class="submitBtn" bindtap='signin'>提 交</button>
+  </view>
+</view>

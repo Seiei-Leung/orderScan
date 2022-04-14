@@ -1,0 +1,16 @@
+.resultItem {
+  box-sizing: border-box;
+  padding: 0.5em;
+  width: 95%;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #444;
+}
+.title {
+  display: inline-block;
+  width: 6em;
+}
+.txt {
+  display: inline-block;
+}

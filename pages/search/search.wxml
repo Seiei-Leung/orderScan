@@ -1,0 +1,69 @@
+<view>
+  <view class="weui-cells weui-cells_after-title" style='position: fixed;left: 0; right: 0;z-index:100;background-color:#fff;'>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd">
+        制单
+      </view>
+      <view class="weui-cell__bd weui-cell__bd_in-select-before">
+        <input class="weui-input" bindinput="bindOrderNumInput" placeholder="请输入内容" value="{{orderno}}"/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd">
+        账号
+      </view>
+      <view class="weui-cell__bd weui-cell__bd_in-select-before">
+        <input class="weui-input" bindinput="bindAccountNumInput" placeholder="请输入内容" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd">
+        日期
+      </view>
+      <view style="display: flex; justify-content: space-around;flex-grow: 1;color: #888;">
+        <view class="inputDateWrapper">
+          <picker mode="date"  class="inputDatePicker" bindchange="changeBdate">{{bdate}}</picker>
+        </view>
+        -
+        <view class="inputDateWrapper">
+          <picker mode="date" class="inputDatePicker" bindchange="changeEdate">{{edate}}</picker>
+        </view>
+      </view>
+    </view>
+    <view>
+      <radio-group bindchange="radioChange" style="margin:5px 0;text-align:center;display:flex;justify-content:space-around;flex-wrap: wrap;padding-bottom:10px;border-bottom:1px solid #ddd;">
+        <radio style='flex:1;white-space:nowrap;line-height:1.8;' checked value="封样板">封样板</radio>
+        <radio style='flex:1;white-space:nowrap;line-height:1.8;' value="销样板">销样板</radio>
+        <radio style='flex:1;white-space:nowrap;line-height:1.8;' value="色差板">色差板</radio>
+        <radio style='flex:1;white-space:nowrap;line-height:1.8;' value="头缸板">头缸板</radio>
+        <radio style='flex:1;white-space:nowrap;line-height:1.8;' value="开发">开发</radio>
+      </radio-group>
+    </view>
+    <view class="btnWrapper">
+      <view class="btn" style="color: #fff;background-color: #1aad19" bindtap="search">点 击 查 询</view>
+      <view class="btn" bindtap="clear">清 空 输 入</view>
+    </view>
+  </view>
+  <view style="padding: 275px 0 20px 0;z-index: -1;">
+    <view class="resultWrapper" wx:if="{{resultList.length>0}}">
+      <view wx:for="{{resultList}}" wx:for-item="item" class="item" bindtap="goResult" data-orderno="{{item.orderno}}" data-color="{{item.color}}" data-kind="{{item.sampletype}}">
+        <view>
+          <view class="title">制单号：</view>
+          <view class="txt">{{item.orderno}}</view>
+        </view>
+        <view>
+          <view class="title">客户：</view>
+          <view class="txt">{{item.custname}}</view>
+        </view>
+        <view>
+          <view class="title">颜色：</view>
+          <view class="txt">{{item.color}}</view>
+        </view>
+        <view>
+          <view class="title">样板类型：</view>
+          <view class="txt">{{item.sampletype}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

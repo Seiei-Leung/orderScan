@@ -1,0 +1,25 @@
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.title {
+  display: inline-block;
+  width: 6em;
+  text-align: right;
+}
+
+.txt {
+  margin-left: 1em;
+  display: inline-block;
+  border-bottom: 1px solid #444;
+  width: 8em;
+  text-align: center;
+}
+
+.submitContainer {
+  vertical-align: top;
+  width: 105px
+}

@@ -1,0 +1,43 @@
+.titleWrapper {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.inputWrapper {
+  font-size: 0px;
+}
+
+.inputWrapper .title {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 15%;
+}
+
+.inputWrapper .input {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  width: 85%;
+  padding-left: 0.5em;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.submitContainer .submitBtn {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  background-color: #21bb20;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+}
